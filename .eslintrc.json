@@ -1,0 +1,75 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "eslint-plugin-import-helpers"
+    ],
+    "rules": {
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "prettier/prettier": "off",
+        "comma-dangle": "off",
+        "lines-between-class-members": "off",
+        "no-tabs": "off",
+        "indent": ["error", "tab"],
+        "react/jsx-indent": [
+            "error",
+            "tab"
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            "tab"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-quotes": "off",
+        "camelcase": "off",
+        "arrow-parens": "off",
+        "object-curly-newline": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    "/^@models/",
+                    "/^@controllers/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
+    }
+}
