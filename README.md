@@ -1,3 +1,5 @@
+# Next.js Portfolium
+
 The code available is the code used on my portfolium, which is entirely build with [Next.js](https://nextjs.org/), it was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). And I'm continuously adding new features and data to it.
 
 If you want to contribute or clone it for your own use, feel free to it! I would appreciate :)
