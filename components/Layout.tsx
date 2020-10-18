@@ -1,9 +1,9 @@
 import {
-	FacebookFilled,
-	TwitterSquareFilled,
-	InstagramFilled,
-	LinkedinFilled,
-	MailFilled
+	FacebookOutlined,
+	InstagramOutlined,
+	LinkedinOutlined,
+	TwitterOutlined,
+	MailOutlined
 } from '@ant-design/icons';
 import Head from 'next/head';
 
@@ -13,7 +13,7 @@ const avatar_url = 'https://avatars2.githubusercontent.com/u/48929501?v=4';
 export const siteTitle = 'Lucas Henrique';
 const name = 'Lucas Henrique';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -39,31 +39,31 @@ export default function Layout({ children, home }) {
 						target='_blank'
 						rel='noreferrer'
 					>
-						<FacebookFilled color='#fff' />
+						<FacebookOutlined color='#fff' />
 					</a>
 					<a
 						href='https://www.instagram.com/luc4s_lem0ss'
 						target='_blank'
 						rel='noreferrer'
 					>
-						<InstagramFilled color='#fff' />
+						<InstagramOutlined color='#fff' />
 					</a>
 					<a
 						href='https://www.linkedin.com/lucashenriqueblemos'
 						target='_blank'
 						rel='noreferrer'
 					>
-						<LinkedinFilled color='#fff' />
+						<LinkedinOutlined color='#fff' />
 					</a>
 					<a
 						href='https://twitter.com/luk3skyw4lker'
 						target='_blank'
 						rel='noreferrer'
 					>
-						<TwitterSquareFilled color='#fff' />
+						<TwitterOutlined color='#fff' />
 					</a>
 					<a href='mailto:lucashenriqueblemos@gmail.com'>
-						<MailFilled color='#fff' />
+						<MailOutlined color='#fff' />
 					</a>
 				</p>
 			</header>

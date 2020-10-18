@@ -16,7 +16,7 @@ interface HomeProps {
 
 const Home: NextPage<HomeProps> = ({ user, repos }) => {
 	return (
-		<Layout home>
+		<Layout>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
