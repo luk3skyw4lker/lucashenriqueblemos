@@ -3,7 +3,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Collapsible from 'react-collapsible';
 
 import Layout, { siteTitle } from '../components/Layout';
 import { getUserDetails, getUserRepos } from '../lib/fetcher';
@@ -23,35 +22,61 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 			</Head>
 
 			<section className={styles.headingMd}>
-				<p>{user.bio}</p>
+				<p className={styles.githubBio}>
+					As it says my GitHub: <strong>{user.bio}</strong>
+				</p>
+
+				<p className={styles.bio}>
+					I&apos;m 19 years old, Javascript Fullstack Developer, IoT enthusiast,
+					musician, philosophy and economics self-taught having a little
+					experience on teaching, as I was second coach of a robotics team of a
+					local college of my city (
+					<a
+						className={styles.repoName}
+						href='https://www.instagram.com/lego_ntq/'
+					>
+						@lego_ntq
+					</a>
+					). Actually working as Fullstack Developer on two startups:&nbsp;
+					<a className={styles.repoName} href='https://bristom.com'>
+						Bristom
+					</a>{' '}
+					and{' '}
+					<a className={styles.repoName} href='https://idflow.com.br'>
+						IDFlow
+					</a>
+					.&nbsp;Learning Go, Next.js and Flutter as new techs.
+				</p>
 			</section>
 
 			<section className={styles.headingMd}>
+				<h2>Projects:</h2>
+
 				<ul className={styles.list}>
-					<Collapsible
+					{/* <Collapsible
 						trigger='Projects'
 						easing='ease-in'
 						triggerTagName='div'
 						triggerClassName={styles.trigger}
 						triggerOpenedClassName={styles.trigger}
 						className={styles.triggerContainer}
-					>
-						{repos?.map(({ html_url, description, name, languages }, index) => (
-							<li className={styles.listItem} key={index}>
-								<Link href={html_url}>
-									<a target='_blank' className={styles.repoName}>
-										{name}
-									</a>
-								</Link>
+					> */}
+					{repos?.map(({ html_url, description, name, languages }, index) => (
+						<li className={styles.listItem} key={index}>
+							<Link href={html_url}>
+								<a target='_blank' className={styles.repoName}>
+									{name}
+								</a>
+							</Link>
 
-								<p>{description}</p>
+							<p className={styles.repoDescription}>{description}</p>
 
-								<small className={styles.lightText}>
-									Languages: {languages.join(', ')}
-								</small>
-							</li>
-						))}
-					</Collapsible>
+							<small className={styles.lightText}>
+								Languages: {languages.join(', ')}
+							</small>
+						</li>
+					))}
+					{/* </Collapsible> */}
 				</ul>
 			</section>
 		</Layout>
