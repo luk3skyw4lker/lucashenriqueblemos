@@ -7,6 +7,35 @@
 	align-items: center;
 }
 
+.repoDescription {
+	line-height: 1.3rem;
+}
+
+.githubBio {
+	color: #fff;
+	line-height: 1rem;
+}
+
+.bio {
+	text-align: justify;
+}
+
+.trigger:hover {
+	background-color: #222;
+}
+
+.trigger {
+	font-weight: bold;
+	font-size: 2rem;
+	color: #ffffff;
+	border: 1px solid #ffffff !important;
+	border-radius: 5px;
+	flex: 1;
+	padding: 0.5rem;
+	padding-left: 1rem;
+	cursor: pointer;
+}
+
 .repoName {
 	text-decoration: underline #0070f3;
 	font-weight: bold;
@@ -29,12 +58,18 @@
 }
 
 .listItem {
-	margin: 0 0 1.25rem;
+	margin: 1rem 0 0.5rem;
+	border: 1px solid #fff;
+	padding: 0.8rem;
+	border-radius: 5px;
+	line-height: 0.9rem;
+	border-color: rgb(48, 52, 54);
 }
 
 .headingMd {
 	font-size: 1.2rem;
 	line-height: 1.5;
+	width: 100%;
 }
 
 .main {

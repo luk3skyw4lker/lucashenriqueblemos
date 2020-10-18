@@ -1,5 +1,11 @@
+import {
+	FacebookOutlined,
+	InstagramOutlined,
+	LinkedinOutlined,
+	TwitterOutlined,
+	MailOutlined
+} from '@ant-design/icons';
 import Head from 'next/head';
-import Link from 'next/link';
 
 import styles from '../styles/layout.module.css';
 
@@ -7,7 +13,7 @@ const avatar_url = 'https://avatars2.githubusercontent.com/u/48929501?v=4';
 export const siteTitle = 'Lucas Henrique';
 const name = 'Lucas Henrique';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -17,48 +23,52 @@ export default function Layout({ children, home }) {
 					content='Lucas Henrique portfolium. See my projects!'
 				/>
 				<meta name='og:title' content={siteTitle} />
-				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
 
 			<header className={styles.header}>
-				{home ? (
-					<>
-						<img
-							src={avatar_url}
-							className={`${styles.headerHomeImage} ${styles.borderCircle}`}
-							alt={name}
-						/>
-						<h1 className={styles.heading2Xl}>{name}</h1>
-					</>
-				) : (
-					<>
-						<Link href='/'>
-							<a>
-								<img
-									src={avatar_url}
-									className={`${styles.headerImage} ${styles.borderCircle}`}
-									alt={name}
-								/>
-							</a>
-						</Link>
-						<h2 className={styles.headingLg}>
-							<Link href='/'>
-								<a className={styles.colorInherit}>{name}</a>
-							</Link>
-						</h2>
-					</>
-				)}
+				<img
+					src={avatar_url}
+					className={`${styles.headerHomeImage} ${styles.borderCircle}`}
+					alt={name}
+				/>
+				<h1 className={styles.heading2Xl}>{name}</h1>
+
+				<p className={styles.socialMedia}>
+					<a
+						href='https://www.facebook.com/lucashenriqueblemos/'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<FacebookOutlined color='#fff' />
+					</a>
+					<a
+						href='https://www.instagram.com/luc4s_lem0ss'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<InstagramOutlined color='#fff' />
+					</a>
+					<a
+						href='https://www.linkedin.com/lucashenriqueblemos'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<LinkedinOutlined color='#fff' />
+					</a>
+					<a
+						href='https://twitter.com/luk3skyw4lker'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<TwitterOutlined color='#fff' />
+					</a>
+					<a href='mailto:lucashenriqueblemos@gmail.com'>
+						<MailOutlined color='#fff' />
+					</a>
+				</p>
 			</header>
 
 			<main>{children}</main>
-
-			{!home && (
-				<div className={styles.backToHome}>
-					<Link href='/'>
-						<a>← Back to home</a>
-					</Link>
-				</div>
-			)}
 		</div>
 	);
 }

@@ -9,26 +9,58 @@ import { getUserDetails, getUserRepos } from '../lib/fetcher';
 import { Repo, User } from '../lib/interfaces';
 import styles from '../styles/Home.module.css';
 
-interface Props {
-	repos: Repo[];
+interface HomeProps {
+	repos?: Repo[];
 	user: User;
 }
 
-const Home: NextPage<Props> = ({ user, repos }) => {
+const Home: NextPage<HomeProps> = ({ user, repos }) => {
 	return (
-		<Layout home>
+		<Layout>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
 
 			<section className={styles.headingMd}>
-				<p>{user.bio}</p>
+				<p className={styles.githubBio}>
+					As it says my GitHub: <strong>{user.bio}</strong>
+				</p>
+
+				<p className={styles.bio}>
+					I&apos;m 19 years old, Javascript Fullstack Developer, IoT enthusiast,
+					musician, philosophy and economics self-taught having a little
+					experience on teaching, as I was second coach of a robotics team of a
+					local college of my city (
+					<a
+						className={styles.repoName}
+						href='https://www.instagram.com/lego_ntq/'
+					>
+						@lego_ntq
+					</a>
+					). Actually working as Fullstack Developer on two startups:&nbsp;
+					<a className={styles.repoName} href='https://bristom.com'>
+						Bristom
+					</a>{' '}
+					and{' '}
+					<a className={styles.repoName} href='https://idflow.com.br'>
+						IDFlow
+					</a>
+					.&nbsp;Learning Go, Next.js and Flutter as new techs.
+				</p>
 			</section>
 
 			<section className={styles.headingMd}>
-				<h2 className={styles.headingLg}>Projects</h2>
+				<h2>Projects:</h2>
 
 				<ul className={styles.list}>
+					{/* <Collapsible
+						trigger='Projects'
+						easing='ease-in'
+						triggerTagName='div'
+						triggerClassName={styles.trigger}
+						triggerOpenedClassName={styles.trigger}
+						className={styles.triggerContainer}
+					> */}
 					{repos?.map(({ html_url, description, name, languages }, index) => (
 						<li className={styles.listItem} key={index}>
 							<Link href={html_url}>
@@ -37,20 +69,21 @@ const Home: NextPage<Props> = ({ user, repos }) => {
 								</a>
 							</Link>
 
-							<p>{description}</p>
+							<p className={styles.repoDescription}>{description}</p>
 
 							<small className={styles.lightText}>
 								Languages: {languages.join(', ')}
 							</small>
 						</li>
 					))}
+					{/* </Collapsible> */}
 				</ul>
 			</section>
 		</Layout>
 	);
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const user = await getUserDetails();
 	const repos = await getUserRepos();
 
