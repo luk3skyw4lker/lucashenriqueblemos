@@ -53,14 +53,6 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 				<h2>Projects:</h2>
 
 				<ul className={styles.list}>
-					{/* <Collapsible
-						trigger='Projects'
-						easing='ease-in'
-						triggerTagName='div'
-						triggerClassName={styles.trigger}
-						triggerOpenedClassName={styles.trigger}
-						className={styles.triggerContainer}
-					> */}
 					{repos?.map(({ html_url, description, name, languages }, index) => (
 						<li className={styles.listItem} key={index}>
 							<Link href={html_url}>
@@ -76,7 +68,6 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 							</small>
 						</li>
 					))}
-					{/* </Collapsible> */}
 				</ul>
 			</section>
 		</Layout>
@@ -91,7 +82,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 		props: {
 			user,
 			repos
-		}
+		},
+		revalidate: 86400
 	};
 };
 
