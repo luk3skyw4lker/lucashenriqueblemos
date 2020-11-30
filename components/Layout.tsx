@@ -6,6 +6,7 @@ import {
 	MailOutlined
 } from '@ant-design/icons';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import styles from '../styles/layout.module.css';
 
@@ -26,10 +27,11 @@ export default function Layout({ children }) {
 			</Head>
 
 			<header className={styles.header}>
-				<img
+				<Image
 					src={avatar_url}
 					className={`${styles.headerHomeImage} ${styles.borderCircle}`}
 					alt={name}
+					unsized
 				/>
 				<h1 className={styles.heading2Xl}>{name}</h1>
 
