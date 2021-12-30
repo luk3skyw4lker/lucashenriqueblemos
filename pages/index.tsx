@@ -27,7 +27,7 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 				</p>
 
 				<p className={styles.bio}>
-					I&apos;m 19 years old, Javascript Fullstack Developer, IoT enthusiast,
+					I&apos;m 20 years old, Javascript Fullstack Developer, IoT enthusiast,
 					musician, philosophy and economics self-taught having a little
 					experience on teaching, as I was second coach of a robotics team of a
 					local college of my city (
@@ -37,15 +37,10 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 					>
 						@lego_ntq
 					</a>
-					). Actually working as Fullstack Developer on two startups:&nbsp;
+					). Actually working as Mid-level Typescript Developer at:&nbsp;
 					<a className={styles.repoName} href='https://bristom.com'>
-						Bristom
-					</a>{' '}
-					and{' '}
-					<a className={styles.repoName} href='https://idflow.com.br'>
-						IDFlow
-					</a>
-					.&nbsp;Learning Go, Next.js and Flutter as new techs.
+						Smarteklife.
+					</a>&nbsp;Learning Go, Next.js and Flutter as new techs.
 				</p>
 			</section>
 
