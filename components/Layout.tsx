@@ -39,28 +39,28 @@ export default function Layout({ children }) {
 					<a
 						href='https://www.facebook.com/lucashenriqueblemos/'
 						target='_blank'
-						rel='noreferrer'
+						rel='noreferrer noopener'
 					>
 						<FacebookOutlined color='#fff' />
 					</a>
 					<a
 						href='https://www.instagram.com/luk3_skyw4lker'
 						target='_blank'
-						rel='noreferrer'
+						rel='noreferrer noopener'
 					>
 						<InstagramOutlined color='#fff' />
 					</a>
 					<a
 						href='https://www.linkedin.com/lucashenriqueblemos'
 						target='_blank'
-						rel='noreferrer'
+						rel='noreferrer noopener'
 					>
 						<LinkedinOutlined color='#fff' />
 					</a>
 					<a
 						href='https://twitter.com/luk3skyw4lker'
 						target='_blank'
-						rel='noreferrer'
+						rel='noreferrer noopener'
 					>
 						<TwitterOutlined color='#fff' />
 					</a>
