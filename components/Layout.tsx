@@ -44,7 +44,7 @@ export default function Layout({ children }) {
 						<FacebookOutlined color='#fff' />
 					</a>
 					<a
-						href='https://www.instagram.com/luk3_skyw4lker'
+						href='https://www.instagram.com/luk3skyw4lker_'
 						target='_blank'
 						rel='noreferrer noopener'
 					>
