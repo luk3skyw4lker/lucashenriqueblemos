@@ -33,14 +33,22 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 					local college of my city (
 					<a
 						className={styles.repoName}
+						rel='noreferrer noopener'
+						target='_blank'
 						href='https://www.instagram.com/lego_ntq/'
 					>
 						@lego_ntq
 					</a>
-					). Actually working as Mid-level Typescript Developer at:&nbsp;
-					<a className={styles.repoName} href='https://bristom.com'>
-						Smarteklife.
-					</a>&nbsp;Learning Go, Next.js and Flutter as new techs.
+					). Actually working as Fullstack Developer at:&nbsp;
+					<a
+						className={styles.repoName}
+						rel='noreferrer noopener'
+						target='_blank'
+						href='https://www.dialog.ci/'
+					>
+						Dialog.
+					</a>
+					&nbsp;Learning Go, Next.js and Flutter as new techs.
 				</p>
 			</section>
 
