@@ -27,7 +27,7 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 				</p>
 
 				<p className={styles.bio}>
-					I&apos;m 20 years old, Javascript Fullstack Developer, IoT enthusiast,
+					I&apos;m 21 years old, Fullstack Developer, IoT enthusiast,
 					musician, philosophy and economics self-taught having a little
 					experience on teaching, as I was second coach of a robotics team of a
 					local college of my city (
@@ -48,7 +48,7 @@ const Home: NextPage<HomeProps> = ({ user, repos }) => {
 					>
 						Dialog.
 					</a>
-					&nbsp;Learning Go, Next.js and Flutter as new techs.
+					&nbsp;Learning Go, Next.js, Rust and Flutter as new techs.
 				</p>
 			</section>
 
